@@ -24,10 +24,10 @@ public class CapStoreController {
 		return capstoreService.setFeedback(productFeedBack);
 	}
 	
-	@RequestMapping(value="/updateFeedback", method = RequestMethod.PUT)
-	public ProductFeedback updateProductFeedback(@RequestBody ProductFeedback productFeedback)
+	@RequestMapping(value="/updateFeedback/{feedback_Id}", method = RequestMethod.PUT)
+	public ProductFeedback updateProductFeedback(@RequestBody ProductFeedback productFeedback, @PathVariable int feedback_Id)
 	{
-		return capstoreService.updateProductFeedBack(productFeedback);
+		return capstoreService.updateProductFeedBack(productFeedback,feedback_Id);
 	}
 	
 	@RequestMapping(value="/getAll/{product_Id}",  method = RequestMethod.GET)

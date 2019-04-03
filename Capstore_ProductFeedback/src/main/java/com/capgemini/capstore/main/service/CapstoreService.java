@@ -40,13 +40,12 @@ public class CapstoreService {
 	}
 
 	
-	public ProductFeedback updateProductFeedBack(ProductFeedback productFeedback)
+	public ProductFeedback updateProductFeedBack(ProductFeedback productFeedback, int feedback_Id)
 	{
-		productFeedback = capStoreFeedback.getOne(productFeedback.getId());
-		productFeedback.setProduct(productFeedback.getProduct());
-		productFeedback.setRating(productFeedback.getRating());
-		productFeedback.setProductFeedback(productFeedback.getProductFeedback());
-		productFeedback.setId(productFeedback.getId());
+		ProductFeedback productFeedBack_update;
+		
+		productFeedBack_update = capStoreFeedback.findById(feedback_Id).get();
+		productFeedback.setId(productFeedBack_update.getId());
 		capStoreFeedback.save(productFeedback);
 		return productFeedback;
 	}
