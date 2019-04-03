@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Capstore_ProductFeedback
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: RKUMA300
+Implementation-Vendor-Id: com.capgemini.capstore
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Feedback
+Created-By: Maven Integration for Eclipse
+
